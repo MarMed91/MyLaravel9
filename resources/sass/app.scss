@@ -1,0 +1,98 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+
+@import '~font-awesome/scss/font-awesome';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.show {
+  text-align: center;
+}
+
+.header {
+  background: red;
+  color: white;
+
+  text-align: center;
+}
+
+.footer {
+  background: black;
+  color: white;
+
+  text-align: center;
+}
+
+table {
+
+  border: 1px solid black;
+
+  background: red;
+  color: white;
+
+  font-size: 30px;
+
+  margin: auto;
+
+  td {
+
+    text-align: center;
+
+    padding: {
+
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  button{
+    width: 150px;
+    height: 30px;
+    background: red;
+  }
+}
+
+div.edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: left;
+
+    div {
+      display: flex;
+
+      justify-content:space-between;
+      align-items: center;
+
+      text-align: left
+    }
+
+    button{
+      width: 150px;
+      height: 30px;
+      background: red;
+      color: white;
+    }
+  }
+}
+button{
+  width: 150px;
+  height: 30px;
+  background: red;
+}
