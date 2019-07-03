@@ -1,0 +1,947 @@
+boolean@BooleanBox:~$ cd /var/www/html/MyLaravel9
+boolean@BooleanBox:/var/www/html/MyLaravel9$ npm run watch-poll
+
+> @ watch-poll /var/www/html/MyLaravel9
+> npm run watch -- --watch-poll
+
+
+> @ watch /var/www/html/MyLaravel9
+> npm run development -- --watch "--watch-poll"
+
+
+> @ development /var/www/html/MyLaravel9
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js "--watch" "--watch-poll"
+
+ 10% building 1/1 modules 0 active                                           
+webpack is watching the files…
+
+ 98% after emitting SizeLimitsPlugin                                           
+
+ DONE  Compiled successfully in 26902ms                               9:37:47 AM
+
+                                                                               Asset      Size   Chunks             Chunk Names
+                                                                        /css/app.css  37.7 KiB  /js/app  [emitted]  /js/app
+                                                                          /js/app.js   279 KiB  /js/app  [emitted]  /js/app
+  fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713   162 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde   434 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9   162 KiB           [emitted]  
+fonts/vendor/font-awesome/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e  75.4 KiB           [emitted]  
+ fonts/vendor/font-awesome/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad  95.7 KiB           [emitted]  
+^C
+boolean@BooleanBox:/var/www/html/MyLaravel9$ cd etc/apache2/sites-available
+bash: cd: etc/apache2/sites-available: No such file or directory
+boolean@BooleanBox:/var/www/html/MyLaravel9$ ls
+app            npm-debug.log.1420066871  readme.md
+artisan        npm-debug.log.1536308068  resources
+bootstrap      npm-debug.log.2310289072  routes
+composer.json  npm-debug.log.2571727435  server.php
+composer.lock  npm-debug.log.3366431502  storage
+config         package.json              tests
+database       phpunit.xml               vendor
+node_modules   public                    webpack.mix.js
+boolean@BooleanBox:/var/www/html/MyLaravel9$ cd etc/apache2/sites-enabled
+bash: cd: etc/apache2/sites-enabled: No such file or directory
+boolean@BooleanBox:/var/www/html/MyLaravel9$ cat etc/apache2/sites-enabled
+cat: etc/apache2/sites-enabled: No such file or directory
+boolean@BooleanBox:/var/www/html/MyLaravel9$ cat /etc/apache2/sites-enabled
+cat: /etc/apache2/sites-enabled: Is a directory
+boolean@BooleanBox:/var/www/html/MyLaravel9$ cat /etc/apache2/sites-enabled/
+cat: /etc/apache2/sites-enabled/: Is a directory
+boolean@BooleanBox:/var/www/html/MyLaravel9$ cd /etc/apache2/sites-available/
+boolean@BooleanBox:/etc/apache2/sites-available$ ls
+000-default.conf  default-ssl.conf  laravel1.conf  MyLaravel9.conf
+boolean@BooleanBox:/etc/apache2/sites-available$     sudo a2dissite 000-default && sudo a2ensite MyLaravel9
+[sudo] password for boolean:     
+Site 000-default already disabled
+Site MyLaravel9 already enabled
+boolean@BooleanBox:/etc/apache2/sites-available$ cd..
+cd..: command not found
+boolean@BooleanBox:/etc/apache2/sites-available$ cd..
+cd..: command not found
+boolean@BooleanBox:/etc/apache2/sites-available$ cd ..
+boolean@BooleanBox:/etc/apache2$ cd /
+boolean@BooleanBox:/$ cd /var/www/html/MyLaravel9
+boolean@BooleanBox:/var/www/html/MyLaravel9$ a2enmod rewrite
+Enabling module rewrite.
+Could not create /etc/apache2/mods-enabled/rewrite.load: Permission denied
+boolean@BooleanBox:/var/www/html/MyLaravel9$ sudo a2enmod rewrite
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+boolean@BooleanBox:/var/www/html/MyLaravel9$   systemctl restart apache2
+boolean@BooleanBox:/var/www/html/MyLaravel9$ npm run watch-poll
+
+> @ watch-poll /var/www/html/MyLaravel9
+> npm run watch -- --watch-poll
+
+
+> @ watch /var/www/html/MyLaravel9
+> npm run development -- --watch "--watch-poll"
+
+
+> @ development /var/www/html/MyLaravel9
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js "--watch" "--watch-poll"
+
+ 10% building 1/1 modules 0 active                                           
+webpack is watching the files…
+
+ 98% after emitting SizeLimitsPlugin                                           
+
+ DONE  Compiled successfully in 30483ms                              10:02:18 AM
+
+                                                                               Asset      Size   Chunks             Chunk Names
+                                                                        /css/app.css  37.7 KiB  /js/app  [emitted]  /js/app
+                                                                          /js/app.js   279 KiB  /js/app  [emitted]  /js/app
+  fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713   162 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde   434 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9   162 KiB           [emitted]  
+fonts/vendor/font-awesome/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e  75.4 KiB           [emitted]  
+ fonts/vendor/font-awesome/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad  95.7 KiB           [emitted]  
+
+
+ WAIT  Compiling...                                                  10:03:13 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 6857ms                               10:03:20 AM
+
+                                                                               Asset      Size   Chunks             Chunk Names
+                                                                        /css/app.css  37.8 KiB  /js/app  [emitted]  /js/app
+  fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713   162 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde   434 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9   162 KiB           [emitted]  
+fonts/vendor/font-awesome/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e  75.4 KiB           [emitted]  
+ fonts/vendor/font-awesome/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad  95.7 KiB           [emitted]  
+ + 1 hidden asset
+
+
+ WAIT  Compiling...                                                  10:03:48 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 9054ms                               10:03:57 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  37.9 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  10:42:42 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 5240ms                               10:42:47 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  37.9 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  10:57:11 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 5617ms                               10:57:17 AM
+
+       Asset    Size   Chunks             Chunk Names
+/css/app.css  38 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  10:57:55 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 5272ms                               10:58:00 AM
+
+       Asset    Size   Chunks             Chunk Names
+/css/app.css  38 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  10:59:18 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ ERROR  Failed to compile with 2 errors                              10:59:19 AM
+
+ error  in ./resources/sass/app.scss
+
+Module build failed (from ./node_modules/css-loader/index.js):
+ModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+    align-items: center;    
+              ^
+      Expected ";".
+   ╷
+74 │     align-items: center;    
+   │                ^
+   ╵
+  stdin 74:16  root stylesheet
+      in /var/www/html/MyLaravel9/resources/sass/app.scss (line 74, column 16)
+    at runLoaders (/var/www/html/MyLaravel9/node_modules/webpack/lib/NormalModule.js:302:20)
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:233:18
+    at context.callback (/var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at render (/var/www/html/MyLaravel9/node_modules/sass-loader/lib/loader.js:52:13)
+    at Function.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:24443:48)
+    at wP.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:15367:15)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at py.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8199:35)
+    at Object.m (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1383:19)
+    at /var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:5078:51
+    at xf.a (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1394:71)
+    at xf.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8214:23)
+    at vS.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8209:25)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at pz.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8204:24)
+    at Object.If (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1540:5)
+    at nF.Is (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1542:7)
+    at pD.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8175:22)
+    at Je (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:580:52)
+    at Immediate._onImmediate (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:589:51)
+    at runCallback (timers.js:794:20)
+
+ @ multi ./resources/js/app.js ./resources/sass/app.scss
+
+ error  in ./resources/sass/app.scss
+
+Module build failed (from ./node_modules/css-loader/index.js):
+ModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+    align-items: center;    
+              ^
+      Expected ";".
+   ╷
+74 │     align-items: center;    
+   │                ^
+   ╵
+  stdin 74:16  root stylesheet
+      in /var/www/html/MyLaravel9/resources/sass/app.scss (line 74, column 16)
+    at runLoaders (/var/www/html/MyLaravel9/node_modules/webpack/lib/NormalModule.js:302:20)
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:233:18
+    at context.callback (/var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at render (/var/www/html/MyLaravel9/node_modules/sass-loader/lib/loader.js:52:13)
+    at Function.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:24443:48)
+    at wP.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:15367:15)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at py.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8199:35)
+    at Object.m (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1383:19)
+    at /var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:5078:51
+    at xf.a (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1394:71)
+    at xf.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8214:23)
+    at vS.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8209:25)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at pz.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8204:24)
+    at Object.If (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1540:5)
+    at nF.Is (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1542:7)
+    at pD.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8175:22)
+    at Je (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:580:52)
+    at Immediate._onImmediate (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:589:51)
+    at runCallback (timers.js:794:20)
+
+     Asset     Size   Chunks             Chunk Names
+/js/app.js  282 KiB  /js/app  [emitted]  /js/app
+
+ERROR in ./resources/sass/app.scss
+Module build failed (from ./node_modules/css-loader/index.js):
+ModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+    align-items: center;    
+              ^
+      Expected ";".
+   ╷
+74 │     align-items: center;    
+   │                ^
+   ╵
+  stdin 74:16  root stylesheet
+      in /var/www/html/MyLaravel9/resources/sass/app.scss (line 74, column 16)
+    at runLoaders (/var/www/html/MyLaravel9/node_modules/webpack/lib/NormalModule.js:302:20)
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:233:18
+    at context.callback (/var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at render (/var/www/html/MyLaravel9/node_modules/sass-loader/lib/loader.js:52:13)
+    at Function.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:24443:48)
+    at wP.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:15367:15)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at py.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8199:35)
+    at Object.m (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1383:19)
+    at /var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:5078:51
+    at xf.a (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1394:71)
+    at xf.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8214:23)
+    at vS.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8209:25)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at pz.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8204:24)
+    at Object.If (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1540:5)
+    at nF.Is (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1542:7)
+    at pD.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8175:22)
+    at Je (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:580:52)
+    at Immediate._onImmediate (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:589:51)
+    at runCallback (timers.js:794:20)
+ @ multi ./resources/js/app.js ./resources/sass/app.scss /js/app[1]
+
+ERROR in ./resources/sass/app.scss
+Module build failed (from ./node_modules/css-loader/index.js):
+ModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+    align-items: center;    
+              ^
+      Expected ";".
+   ╷
+74 │     align-items: center;    
+   │                ^
+   ╵
+  stdin 74:16  root stylesheet
+      in /var/www/html/MyLaravel9/resources/sass/app.scss (line 74, column 16)
+    at runLoaders (/var/www/html/MyLaravel9/node_modules/webpack/lib/NormalModule.js:302:20)
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:233:18
+    at context.callback (/var/www/html/MyLaravel9/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at render (/var/www/html/MyLaravel9/node_modules/sass-loader/lib/loader.js:52:13)
+    at Function.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:24443:48)
+    at wP.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:15367:15)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at py.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8199:35)
+    at Object.m (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1383:19)
+    at /var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:5078:51
+    at xf.a (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1394:71)
+    at xf.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8214:23)
+    at vS.$2 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8209:25)
+    at uU.vt (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9079:42)
+    at uU.vs (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:9081:32)
+    at iB.uF (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8429:46)
+    at us.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8571:7)
+    at Object.eH (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1512:80)
+    at ad.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8492:3)
+    at iO.ba (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8422:25)
+    at iO.cv (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8409:6)
+    at pz.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8204:24)
+    at Object.If (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1540:5)
+    at nF.Is (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:1542:7)
+    at pD.$0 (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:8175:22)
+    at Je (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:580:52)
+    at Immediate._onImmediate (/var/www/html/MyLaravel9/node_modules/sass/sass.dart.js:589:51)
+    at runCallback (timers.js:794:20)
+ @ ./resources/sass/app.scss
+
+
+ WAIT  Compiling...                                                  10:59:48 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 4483ms                               10:59:53 AM
+
+                                                                               Asset      Size   Chunks             Chunk Names
+                                                                        /css/app.css  38.1 KiB  /js/app  [emitted]  /js/app
+                                                                          /js/app.js   279 KiB  /js/app  [emitted]  /js/app
+  fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713   162 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde   434 KiB           [emitted]  
+  fonts/vendor/font-awesome/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9   162 KiB           [emitted]  
+fonts/vendor/font-awesome/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e  75.4 KiB           [emitted]  
+ fonts/vendor/font-awesome/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad  95.7 KiB           [emitted]  
+
+
+ WAIT  Compiling...                                                  11:00:10 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 3616ms                               11:00:14 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.1 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:00:22 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 2864ms                               11:00:25 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.2 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:00:38 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 2843ms                               11:00:41 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.2 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:02:44 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 5217ms                               11:02:49 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.2 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:03:05 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 3717ms                               11:03:09 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.3 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:04:48 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 5561ms                               11:04:54 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.3 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:05:12 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 4751ms                               11:05:17 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.4 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:06:38 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 6727ms                               11:06:45 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.4 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+
+
+ WAIT  Compiling...                                                  11:28:10 AM
+
+ 98% after emitting SizeLimitsPlugin                                         
+
+ DONE  Compiled successfully in 4253ms                               11:28:14 AM
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css  38.4 KiB  /js/app  [emitted]  /js/app
+ + 6 hidden assets
+^C
+boolean@BooleanBox:/var/www/html/MyLaravel9$ php artisan route:list
++--------+-----------+-----------------+--------------+--------------------------------------------+--------------+
+| Domain | Method    | URI             | Name         | Action                                     | Middleware   |
++--------+-----------+-----------------+--------------+--------------------------------------------+--------------+
+|        | GET|HEAD  | /               |              | Closure                                    | web          |
+|        | GET|HEAD  | api/user        |              | Closure                                    | api,auth:api |
+|        | GET|HEAD  | cars            | cars.index   | App\Http\Controllers\CarController@index   | web          |
+|        | POST      | cars            | cars.store   | App\Http\Controllers\CarController@store   | web          |
+|        | GET|HEAD  | cars/create     | cars.create  | App\Http\Controllers\CarController@create  | web          |
+|        | GET|HEAD  | cars/{car}      | cars.show    | App\Http\Controllers\CarController@show    | web          |
+|        | PUT|PATCH | cars/{car}      | cars.update  | App\Http\Controllers\CarController@update  | web          |
+|        | DELETE    | cars/{car}      | cars.destroy | App\Http\Controllers\CarController@destroy | web          |
+|        | GET|HEAD  | cars/{car}/edit | cars.edit    | App\Http\Controllers\CarController@edit    | web          |
++--------+-----------+-----------------+--------------+--------------------------------------------+--------------+
+boolean@BooleanBox:/var/www/html/MyLaravel9$ ^C
+boolean@BooleanBox:/var/www/html/MyLaravel9$ php artisan migrate
+Nothing to migrate.
+boolean@BooleanBox:/var/www/html/MyLaravel9$ php artisan migrate:rollback
+Rolling back: 2019_05_21_160503_create_cars_table
+Rolled back:  2019_05_21_160503_create_cars_table
+boolean@BooleanBox:/var/www/html/MyLaravel9$ php artisan migrate
+Migrating: 2019_05_21_160503_create_cars_table
+Migrated:  2019_05_21_160503_create_cars_table
+boolean@BooleanBox:/var/www/html/MyLaravel9$ php artisan route:list
+
++--------+-----------+-----------------+--------------+--------------------------------------------+--------------+
+| Domain | Method    | URI             | Name         | Action                                     | Middleware   |
++--------+-----------+-----------------+--------------+--------------------------------------------+--------------+
+|        | GET|HEAD  | /               |              | Closure                                    | web          |
+|        | GET|HEAD  | api/user        |              | Closure                                    | api,auth:api |
+|        | GET|HEAD  | cars            | cars.index   | App\Http\Controllers\CarController@index   | web          |
+|        | POST      | cars            | cars.store   | App\Http\Controllers\CarController@store   | web          |
+|        | GET|HEAD  | cars/create     | cars.create  | App\Http\Controllers\CarController@create  | web          |
+|        | GET|HEAD  | cars/{car}      | cars.show    | App\Http\Controllers\CarController@show    | web          |
+|        | PUT|PATCH | cars/{car}      | cars.update  | App\Http\Controllers\CarController@update  | web          |
+|        | DELETE    | cars/{car}      | cars.destroy | App\Http\Controllers\CarController@destroy | web          |
+|        | GET|HEAD  | cars/{car}/edit | cars.edit    | App\Http\Controllers\CarController@edit    | web          |
++--------+-----------+-----------------+--------------+--------------------------------------------+--------------+
+boolean@BooleanBox:/var/www/html/MyLaravel9$ 
+boolean@BooleanBox:/var/www/html/MyLaravel9$ cd ..
+boolean@BooleanBox:/var/www/html$ cd MyLaravel10
+boolean@BooleanBox:/var/www/html/MyLaravel10$ cd ..
+boolean@BooleanBox:/var/www/html$ history
+    1  sudo ./VBoxLinuxAdditions.run 
+    2  reboot
+    3  exit
+    4  sudo apt-get install apache2
+    5  reboot 
+    6  ifconfig
+    7  sudo systemctl enable apache2
+    8  sudo systemctl start apache2
+    9  sudo apt-get install php libapache2-mod-php
+   10  sudo systemctl restart apache2
+   11  cd /var/www/html
+   12  ls
+   13  ok
+   14  clear
+   15  nano test.php
+   16  ls -alh
+   17  cd ..
+   18  ls
+   19  sudo chown boolean:boolean html
+   20  ls -alh
+   21  cd html
+   22  nano test.php 
+   23  history
+   24  sudo apt-get install mysql-server
+   25  cd /etc/mysql/mysql.conf.d/
+   26  ls
+   27  sudo nano mysqld.cnf 
+   28  sudo systemctl status mysql.service 
+   29  sudo mysql -u root
+   30  history
+   31  mysql -u root
+   32  sudo mysql -u root
+   33  apt-cache search libapache2 mysql
+   34  sudo apt-get install php-mysql phpmyadmin 
+   35  sudo apt-get install libapache2-mod-php
+   36  nano /etc/apache2/conf-available/phpmyadmin.conf
+   37  sudo nano /etc/apache2/conf-available/phpmyadmin.conf
+   38  a2enconf phpmyadmin
+   39  sudo a2enconf phpmyadmin
+   40  sudo systemctl restart apache2
+   41  sudo mysql -u root
+   42  sudo systemctl restart mysql.service 
+   43  sudo mysql -u root
+   44  sudo systemctl restart mysql.service 
+   45  sudo mysql -u root
+   46  sudo mysql -u root -p
+   47  shutdown -h now
+   48  sudo mkdir /var/www/html/boolean
+   49  shutdown -h now
+   50  cd /var/www/html/boolean/
+   51  ls
+   52  cd ..
+   53  ls
+   54  lsblk
+   55  exit
+   56  id
+   57  cd /var/www/html/boolean/
+   58  xit
+   59  exit
+   60  cd /var/www/html/boolean/
+   61  ls
+   62  cd /var/www/html/
+   63  lsblk
+   64  ls -alh
+   65  sudo adduser -G boolean vboxsf
+   66  sudo useradd -G vboxsf boolean
+   67  sudo useradd -G boolean vboxsf
+   68  sudo useradd -g boolean vboxsf
+   69  su boolean 
+   70  sudo useradd -g vboxsf boolean 
+   71  sudo reboot
+   72  id
+   73  cd /var/www/html/boolean/
+   74  ls
+   75  exit
+   76  cd /var/www/html/boolean/
+   77  id
+   78  sudo usermod -a -G vboxsf boolean
+   79  su boolean
+   80  sudo usermod -a -G vboxsf www-data 
+   81  sudo reboot
+   82  cd /var/www/html/boolean/
+   83  ls
+   84  nano /var/www/html/boolean/test.php 
+   85  shutdown -h now
+   86  sudo apt-get install curl
+   87  curl -sS https://getcomposer.org/installer | php
+   88  find . | grep -i composer
+   89  php composer.phar 
+   90  php composer.phar about
+   91  composer
+   92  cd
+   93  ./composer.phar 
+   94  sudo mv composer.phar /usr/bin/composer
+   95  composer
+   96  cd /var/www/html/boolean/
+   97  composer create-project -prefer-dist laravel/laravel explore
+   98  composer create-project --prefer-dist laravel/laravel explore
+   99  ls
+  100  php artisan serve
+  101  cd explore/
+  102  ls
+  103  php artisan serve
+  104  shutdown -h now
+  105  cd /var/www/html/boolean/explore/
+  106  cd ..
+  107  ls
+  108  mv explore/ laravel
+  109  ls
+  110  cd laravel/
+  111  ls
+  112  php artisan serve
+  113  php artisan serve --host=192.168.1.200
+  114  apt-cache search npm
+  115  sudo apt-get install npm
+  116  ls
+  117  cat package.json 
+  118  reset ; cat package.json 
+  119  sudo apt-get install node npm
+  120  sudo apt-get install npm
+  121  node -v
+  122  npm -v
+  123  npm install
+  124  sudo npm install
+  125  cd ..
+  126  ls
+  127  ln -s test.php tast
+  128  shutdown -h now
+  129  cd /var/www/html/boolean/
+  130  ls
+  131  ln -s test.php  te
+  132  shutdown -h now
+  133  ls
+  134  cd resources/sass/
+  135  ls
+  136  nano app.scss 
+  137  exit
+  138  history 
+  139  exit
+  140  cd /var/www/html/boolean/
+  141  ln -s test.php  te
+  142  rm te
+  143  cd laravel/
+  144  npm install
+  145  npm run dev
+  146  cd ..
+  147  ls
+  148  mkdir test
+  149  cd test/
+  150  npm install
+  151  cd ..
+  152  cd laravel/
+  153  ls
+  154  npm install
+  155  npm install --no-optional
+  156  npm run dev
+  157  yarn
+  158  npm ls redux
+  159  php artisan serve &
+  160  npm run dev
+  161  npm install --no-optional
+  162  npm run dev
+  163  pkill -9 php
+  164  ls
+  165  ls node_modules/
+  166  npm ls
+  167  ls
+  168  npm run dev
+  169  cat /var/www/html/boolean/laravel/npm-debug.log 
+  170  rpm bugs
+  171  npm bugs
+  172  sudo apt-get install nodejs
+  173  ls
+  174  nano package.json 
+  175  npm rebuild 
+  176  npm rebuild node-sass
+  177  npm run dev
+  178  history 
+  179  npm run production
+  180  npm run watch
+  181  ls
+  182  mv node_modules/ node_modules.bk
+  183  npm install --global cross-env
+  184  sudo npm install --global cross-env
+  185  ls
+  186  ls node_modules.bk/
+  187  npm rebuild
+  188  npm run dev
+  189  npm rebuild node-sass
+  190  npm run dev
+  191  npm install
+  192  sudo npm install --global cross-env
+  193  sudo npm install --no-bin-links
+  194  sudo npm rebuild
+  195  sudo npm install --no-bin-links
+  196  npm run watch
+  197  npm run dev
+  198  npm run watch
+  199  npm run watch-pool
+  200  npm run watch-poll
+  201  ls
+  202  rm -rf node_modules.bk/
+  203  sudo npm install --global cross-env ; 
+  204  npm rebuild
+  205  sudo npm install --no-bin-links --no-optional
+  206  npm rebuild
+  207  sudo npm install --no-bin-links --no-optional
+  208  npm run watch-poll
+  209  history 
+  210  exit
+  211  ls
+  212  nano webpack.mix.js 
+  213  ls
+  214  php artisan serve --host=192.168.1.200
+  215  ls
+  216  ls node
+  217  ls
+  218  rm -rf node_modules
+  219  php artisan serve --host=192.168.1.200
+  220  history 
+  221  exit
+  222  cd /var/www/html/boolean/laravel/
+  223  npm run watch-poll
+  224  exit
+  225  php artisan serve --host=192.168.1.200
+  226  exit
+  227  shutdown -h now
+  228  ls
+  229  cat resources/sass/app.scss 
+  230  exit
+  231  cd /var/www/html/boolean/laravel/
+  232  npm run watch-poll
+  233  exit
+  234  php artisan serve --host=192.168.1.200
+  235  exit
+  236  shutdown -h now
+  237  cd /var/www/html/boolean/
+  238  ls
+  239  shutdown -h now
+  240  cd /var/www/html/boolean/
+  241  ls
+  242  cd laravel/
+  243  ls
+  244  shutdown -h now
+  245  composer create-project --prefer-dist laravel/laravel explore
+  246  cd lara
+  247  ls
+  248  cd explore/
+  249  ls
+  250  cat package.json 
+  251  shutdown -h now
+  252  ls
+  253  mv explore/ Laravel
+  254  cd Laravel/
+  255  ls
+  256  cat package.json 
+  257  sudo systemctl stop apache2
+  258  sudo shutdown -h now
+  259  sudo apt-get install php libapache2-mod-php
+  260  sudo systemctl restart apache2
+  261  cd /var/www/html/
+  262  ls
+  263  cd boolean/
+  264  ls
+  265  cd apachesmixsass-teambit/
+  266  ls
+  267  npm run watch-poll
+  268  lsof 
+  269  man lsof
+  270  shutdown -h now
+  271  cd /var/www/html/
+  272  ls
+  273  cd boolean/
+  274  ls
+  275  shutdown -h now
+  276  cat /var/log/apache2/error.log
+  277  watch -n1 
+  278  cat /var/log/apache2/error.log
+  279  watch -n1 "cat /var/log/apache2/error.log"
+  280  php
+  281  php echo "Hello World"
+  282  php echo "Hello World";
+  283  watch -n1 "cat /var/log/apache2/error.log"
+  284  exit
+  285  shutdown -h now
+  286  cat /var/log/apache2/error.log
+  287  shutdown -h now
+  288  cd /var/www/html/boolean/PhpTest/
+  289  ls
+  290  php index.php 
+  291  cat /var/log/apache2/error.log
+  292  echo "hello world"
+  293  php index.php Pippo
+  294  php index.php Pluto
+  295  php index.php Pluto Pippo
+  296  cat /var/log/apache2/error.log
+  297  watch -n1 "cat /var/log/apache2/error.log"
+  298  shutdown -h now
+  299  cat /var/log/apache2/error.log
+  300  shutdown -h now
+  301  cat /var/log/apache2/error.log
+  302  shutdown -h now
+  303  rm /var/log/apache2/error.log
+  304  sudo rm /var/log/apache2/error.log
+  305  cat /var/log/apache2/error.log
+  306  sudo systemctl restart apache2
+  307  cat /var/log/apache2/error.log
+  308  ls
+  309  touch /var/log/apache2/error.log
+  310  sudo touch /var/log/apache2/error.log
+  311  cat /var/log/apache2/error.log
+  312  sudo echo "" >  /var/log/apache2/error.log
+  313  sudo rm /var/log/apache2/error.log ; sudo systemctl restart apache2
+  314  cat /var/log/apache2/error.log
+  315  cd /var/www/html/
+  316  ls
+  317  cd boolean/
+  318  ls
+  319  composer create-project --prefer-dist laravel/laravel laravel
+  320  reboot
+  321  cd /var/www/html/boolean/
+  322  ls
+  323  cd Laravel/`
+  324  cd Laravel/
+  325  ls
+  326  cat ind
+  327  ls public/index.php 
+  328  find . 
+  329  find . | grep -i htaccess
+  330  cat public/.htaccess 
+  331  ls
+  332  nano .htaccess
+  333  reset ; cat .htaccess ; echo ; echo ; cat public/.htaccess 
+  334  shutdown -h now
+  335  cd /var/www/html/boolean/
+  336  composer create-project --prefer-dist laravel/laravel laravel
+  337  sudo apt-get update 
+  338  cd
+  339  ls
+  340  mkdir tmp
+  341  cd tmp/
+  342  ls
+  343  composer create-project --prefer-dist laravel/laravel laravel
+  344  composer create-project --prefer-dist laravel/laravel explore
+  345  cd /var/www/html/boolean/
+  346  composer -vv create-project --prefer-dist laravel/laravel laravel
+  347  composer -vvv create-project --prefer-dist laravel/laravel laravel
+  348  ls
+  349  mv laravel/ Laravel
+  350  cd Laravel/
+  351  ls
+  352  php artisan serve --host=192.168.1.200 --port 800
+  353  sudo php artisan serve --host=192.168.1.200 --port 800
+  354  watch -n1 "cat /var/log/apache2/error.log"
+  355  shutdown -h now
+  356  watch -n1 "cat /var/log/apache2/error.log"
+  357  [A
+  358  watch -n1 "cat /var/log/apache2/error.log"
+  359  sudo rm /var/log/apache2/error.log ; sudo systemctl restart apache2
+  360  watch -n1 "cat /var/log/apache2/error.log"
+  361  shutdown -h now
+  362  mysql -u root -p
+  363  exit
+  364  shutdown -h now
+  365  cd /var/www/html
+  366  ls
+  367  cd boolean
+  368  ls
+  369  cd ..
+  370  Boolean
+  371  reboot
+  372  cd /var/www/html/boolean
+  373  ls
+  374  npm install
+  375  cd MyLaravel9
+  376  npm install
+  377  npm run dev
+  378  npm run install @babel/core@^7.0.0-0
+  379  sudo npm run install @babel/core@^7.0.0-0
+  380  reboot
+  381  cd /var/www/html
+  382  ls
+  383  cd boolean
+  384  reboot
+  385  cd public
+  386  pwd
+  387  cd /var/www/html/MyLaravel9
+  388  npm run watch-poll
+  389  cd etc/apache2/sites-available
+  390  ls
+  391  cd etc/apache2/sites-enabled
+  392  cat etc/apache2/sites-enabled
+  393  cat /etc/apache2/sites-enabled
+  394  cat /etc/apache2/sites-enabled/
+  395  cd /etc/apache2/sites-available/
+  396  ls
+  397  cd..
+  398  cd ..
+  399  cd /
+  400  cd /var/www/html/MyLaravel9
+  401  a2enmod rewrite
+  402  sudo a2enmod rewrite
+  403  npm run watch-poll
+  404  php artisan route:list
+  405  php artisan migrate
+  406  php artisan migrate:rollback
+  407  php artisan migrate
+  408  php artisan route:list
+  409  cd ..
+  410  cd MyLaravel10
+  411  cd ..
+  412  history
+boolean@BooleanBox:/var/www/html$ 
